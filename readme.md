@@ -1,10 +1,10 @@
 # Text based social media
-This project is the result of the assignment that I received a week ago. It contains a Spring Boot project that exposes an API meant to be theoritically used by a Front End social media application. It allows users to register, login, post text, comment on posts, follow other users and view different types of posts and comments while ensuring security and preventing unathorized access.
+This project is the result of the assignment that I received a week ago. It contains a Spring Boot project that exposes an API meant to be theoretically used by a Front End social media application. It allows users to register, login, post text, comment on posts, follow other users and view different types of posts and comments while ensuring security and preventing unathorized access.
 
 # Implemented features
-* **Account registration and authentication**: A user can register with their E-Mail as their username and choose a Plan Type.
+* **Account registration and authentication**: A user can register with their email as their username and choose a plan type.
 * **Posts and Comments**: Post and comment handling is done to ensure the proper length of text and the repetitiveness (spam). Everything is then stored to the database.
-* **Following and Follower relationships**: The relations between followers and the accounts they are following is managed through the API. Just like posts and comments, the relations are stored to the database as well.
+* **Following and Follower relations**: The relations between followers and the accounts they are following is managed through the API. Just like posts and comments, the relations are stored to the database as well.
 * **Views**: The API supports a variety of views meant to be utilized by the Front End application. Viewing posts of people they follow, posts of their own, and their latest comments are all supported. A view of their followers is supported as well.
 
 # Tech stack
@@ -24,12 +24,12 @@ The project contains two application.properties files:
 * /src/main/resources/application.properties
 * /src/test/resources/application.properties
 
-Both expect the database:
+Both expect the database to be:
 * Named as: db
 * Available at port: 5432
 * With the password of user postgres as: postgres
 
-Either the database will be set as expected above, or the files will have to be modified accordingly. Samples values for the database are provided in the sample-values.txt file. The passwords provided for the three sample accounts are bcrypt encoded and their decoded values are first-password, second-password and third-password respectively. The schema is auto-generated on the first run of the project.
+Either the database will be set as expected above, or the files will have to be modified accordingly. Sample values for the database are provided in the sample-values.txt file. The passwords provided for the three sample accounts are bcrypt encoded and their decoded values are first-password, second-password and third-password respectively. The schema is auto-generated on the first run of the project.
 
 Loading the project with Intellij IDEA on a machine with Java 17 or higher, allows easily running the project as well as the tests included.
 
