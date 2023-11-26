@@ -1,0 +1,18 @@
+insert into account(id, plan, email, password) values(1, 'Free', 'first@account.com', '$2a$12$HKpctN/nPGtOhurdLgSlEOAymAW8dzROTtbbystN0m4cz7BgoKIRC');
+insert into account(id, plan, email, password) values(2, 'Free', 'second@account.com', '$2a$12$uWvSbBuhYpeG0f0wq1mcX.V7LASm8.AD7H.s27vRjTa47rnAkPhFO');
+insert into account(id, plan, email, password) values(3, 'Free', 'third@account.com', '$2a$12$Z8t/bLC7yEJEzs3YfZ/Lo.snF0ChszHF0M0oH5/AzZHz2z03e3Cyq');
+
+insert into post(id, account_id, text, timestamp) values(1, 1, 'Post 1', timestamp '2023-10-21 00:00');
+insert into post(id, account_id, text, timestamp) values(2, 2, 'Post 1', timestamp '2023-10-21 01:00');
+insert into post(id, account_id, text, timestamp) values(3, 2, 'Post 2', timestamp '2023-10-21 02:00');
+insert into post(id, account_id, text, timestamp) values(4, 3, 'Post 1', timestamp '2023-10-21 03:00');
+insert into post(id, account_id, text, timestamp) values(5, 3, 'Post 2', timestamp '2023-10-21 04:00');
+insert into post(id, account_id, text, timestamp) values(6, 3, 'Post 3', timestamp '2023-10-21 05:00');
+
+insert into follower(id, following_account_id, follower_account_id) values(1, 3, 1);
+insert into follower(id, following_account_id, follower_account_id) values(2, 3, 2);
+
+insert into comment(id, post_id, account_id, text, timestamp) values(1, 4, 3, 'Comment 1', timestamp '2023-10-21 06:00');
+insert into comment(id, post_id, account_id, text, timestamp) values(2, 1, 1, 'Comment 2', timestamp '2023-10-21 07:00');
+insert into comment(id, post_id, account_id, text, timestamp) values(3, 2, 2, 'Comment 3', timestamp '2023-10-21 08:00');
+insert into comment(id, post_id, account_id, text, timestamp) values(4, 3, 3, 'Comment 4', timestamp '2023-10-21 09:00');
